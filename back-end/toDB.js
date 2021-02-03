@@ -25,13 +25,13 @@ var ddb = new AWS.DynamoDB({
   var params = {
     TableName: 'temperature_data',
     Item: {
-      'epoch_time': {
+      'epochTime': {
         'N': utcSecondsSinceEpoch.toString()
       },
-      'room_temp': {
+      'roomTemp': {
         'N': data.temperature.toString()
       },
-      'room_humidity': {
+      'roomHumidity': {
         'N': data.humidity.toString()
       },
       'TTL': {
